@@ -1,4 +1,3 @@
-# LCR-solar-collectors-Ansys-Fluent-UDF
 This UDF defines a function that assigns a heat flux profile to a face zone in Fluent. The UDF is related to the LCR (low concentration ratio) solar collectors, which are solar thermal devices that use reflectors to concentrate the solar radiation onto a receiver. The UDF uses the following parameters and variables:
 
 •  heat_flux_profile: the name of the user-defined function that takes three arguments: thread, position, and f.
@@ -33,7 +32,9 @@ It begins a face loop over the face zone where the heat flux profile is applied.
 It begins a node loop over the nodes of each face in the face loop.
 It gets the cell adjacent to the face f on side 0 using F_C0 and stores it in c.
 It calculates the coordinates of the face centroid using F_CENTROID and stores them in x.
-It calculates the angle between the x-axis and the line connecting the origin and
+It calculates the angle between the x-axis and
+the line connecting
+the origin and
 the face centroid using atan2 and stores it in angle.
 It checks if
 the angle is within
@@ -50,4 +51,4 @@ It ends
 the node loop and
 the face loop.
 
-The UDF can be used to model heat transfer problems with LCR solar collectors, such as solar water heating, solar desalination, or solar cooling systems. 
+The UDF can be used to model heat transfer problems with LCR solar collectors, such as solar water heating, solar desalination, or solar cooling systems.
